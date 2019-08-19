@@ -11,16 +11,16 @@ import UIKit
 
 extension String {
     
-    var removeWhiteSpace: String{
+    public var removeWhiteSpace: String{
         return self.replacingOccurrences(of: " ", with: "")
     }
     
-    var trimNewLineAndWhiteSpace: String {
+    public var trimNewLineAndWhiteSpace: String {
         return self.trimmingCharacters(in: .whitespacesAndNewlines)
     }
     
     
-    var isValidEmail: Bool{
+    public var isValidEmail: Bool{
         
         let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
         
@@ -29,7 +29,7 @@ extension String {
     }
     
     //validate PhoneNumber
-    var isPhoneNumber: Bool
+    public var isPhoneNumber: Bool
     {
         let charcter  = CharacterSet.init(charactersIn: "+0123456789").inverted
         
@@ -42,7 +42,7 @@ extension String {
         return  self == filtered
     }
     
-    func toURL() -> URL?
+    public func toURL() -> URL?
     {
         let urlString = self.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         
@@ -51,24 +51,24 @@ extension String {
         return URL(string: url)
     }
     
-    func widthOfString(usingFont font: UIFont) -> CGFloat {
+    public func widthOfString(usingFont font: UIFont) -> CGFloat {
         let fontAttributes = [NSAttributedString.Key.font: font]
         let size = self.size(withAttributes: fontAttributes)
         return size.width
     }
     
-    func heightOfString(usingFont font: UIFont) -> CGFloat {
+    public func heightOfString(usingFont font: UIFont) -> CGFloat {
         let fontAttributes = [NSAttributedString.Key.font: font]
         let size = self.size(withAttributes: fontAttributes)
         return size.height
     }
     
-    func toDate(with dateFormatter:DateFormatter) -> Date?
+    public func toDate(with dateFormatter:DateFormatter) -> Date?
     {
         return dateFormatter.date(from: self)
     }
     
-    func toDate(dateFormat:String,timeZone:TimeZone? = nil) -> Date?
+    public func toDate(dateFormat:String,timeZone:TimeZone? = nil) -> Date?
     {
         let dateFormatter = DateFormatter()
         
@@ -88,7 +88,7 @@ extension String {
         return dateFormatter.date(from: self)
     }
     
-    func currentDate(dateFormat:String) -> Date?
+    public func currentDate(dateFormat:String) -> Date?
     {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale.current
@@ -98,7 +98,7 @@ extension String {
         return dateFormatter.date(from: self) ?? nil
     }
     
-    func getDate(dateFormat:String) -> Date?
+    public func getDate(dateFormat:String) -> Date?
     {
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
@@ -109,7 +109,7 @@ extension String {
         return dateFormatter.date(from: self) ?? nil
     }
     
-    func getStringInitials() -> String
+    public func getStringInitials() -> String
     {
         let nameSeperatedArray = self.components(separatedBy: " ")
         
@@ -131,7 +131,7 @@ extension String {
         }
     }
     
-    var isBlank : Bool {
+    public var isBlank : Bool {
         let s = self
         let cset = CharacterSet.newlines.inverted
         let r = s.rangeOfCharacter(from: cset)
@@ -139,7 +139,7 @@ extension String {
         return ok
     }
     
-    func addImageBeforeOrAfter(before:String,image:UIImage,after:String) -> NSMutableAttributedString
+    public func addImageBeforeOrAfter(before:String,image:UIImage,after:String) -> NSMutableAttributedString
     {
         let imageAttachment =  NSTextAttachment()
         
@@ -160,7 +160,7 @@ extension String {
         return completeText
     }
     
-    func getCurrencySymbol() -> String?
+    public func getCurrencySymbol() -> String?
     {
         let currency = self.uppercased()
         
@@ -172,7 +172,7 @@ extension String {
         return nil
     }
     
-    func getLocale() -> Locale? {
+    public func getLocale() -> Locale? {
         
         var locale:Locale? = nil
         
@@ -190,7 +190,7 @@ extension String {
         return locale
     }
     
-    func getIfHyperLinkString(attributeDict:[NSAttributedString.Key : Any]) -> NSMutableAttributedString {
+    public func getIfHyperLinkString(attributeDict:[NSAttributedString.Key : Any]) -> NSMutableAttributedString {
         
         let attributedString = NSMutableAttributedString(string: self.strippingHtml, attributes: attributeDict)
         
@@ -213,28 +213,28 @@ extension String {
         }
     }
     
-    var strippingHtml:String
+    public var strippingHtml:String
     {
         let str = self.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
         
         return str
     }
     
-    var stripTimeStamp:String
+    public var stripTimeStamp:String
     {
         let timeStamp = self.components(separatedBy: CharacterSet.decimalDigits.inverted).joined(separator: "")
         
         return timeStamp
     }
     
-    func substring(with nsrange: NSRange) -> Substring?
+    public func substring(with nsrange: NSRange) -> Substring?
     {
         guard let range = Range(nsrange, in: self) else { return nil }
         
         return self[range]
     }
     
-    func applyPatternOnNumbers(pattern: String, replacmentCharacter: Character) -> String {
+    public func applyPatternOnNumbers(pattern: String, replacmentCharacter: Character) -> String {
         var pureNumber = self.replacingOccurrences( of: "[^0-9]", with: "", options: .regularExpression)
         for index in 0 ..< pattern.count {
             guard index < pureNumber.count else { return pureNumber }
@@ -248,7 +248,7 @@ extension String {
     
     //Localization Method
     
-    func localized(bundle: Bundle = .main, tableName: String = "Localization") -> String {
+    public func localized(bundle: Bundle = .main, tableName: String = "Localization") -> String {
         return NSLocalizedString(self, tableName: tableName, value: "\(self)", comment: "")
     }
 

@@ -10,12 +10,12 @@ import Foundation
 
 extension Date
 {
-    func toString(with dateFormatter:DateFormatter) -> String?
+    public func toString(with dateFormatter:DateFormatter) -> String?
     {
         return dateFormatter.string(from: self)
     }
     
-    func toString(dateFormat: String,timezone:TimeZone? = nil) -> String
+    public func toString(dateFormat: String,timezone:TimeZone? = nil) -> String
     {
         let dateFormatter = DateFormatter()
         
@@ -35,7 +35,7 @@ extension Date
         return (dateFormatter.string(from: self))
     }
     
-    func currentDate(dateFormat:String) -> String
+    public func currentDate(dateFormat:String) -> String
     {
        let dateFormatter = DateFormatter()
         
@@ -46,12 +46,12 @@ extension Date
         return (dateFormatter.string(from: self))
     }
     
-    func getComponents(component: Set<Calendar.Component>) -> DateComponents
+    public func getComponents(component: Set<Calendar.Component>) -> DateComponents
     {
         return Calendar.current.dateComponents(component, from: self)
     }
     
-    var age: Int {
+    public var age: Int {
         return Calendar.current.dateComponents([.year], from: self, to: Date()).year!
     }
     
