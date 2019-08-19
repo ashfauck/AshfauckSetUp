@@ -31,7 +31,7 @@ public enum DateFormat : String
 
 extension DateFormatter
 {
-    static let iso8601Full: DateFormatter = {
+    public static let iso8601Full: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = DateFormat.fullFormat.rawValue
         formatter.timeZone = TimeZone(abbreviation: "GMT")
@@ -39,7 +39,7 @@ extension DateFormatter
         return formatter
     }()
     
-    static let ddMMyyyyDateFormatter: DateFormatter =
+    public static let ddMMyyyyDateFormatter: DateFormatter =
     {
         let dateFormatter = DateFormatter()
         
@@ -50,7 +50,7 @@ extension DateFormatter
         return dateFormatter
     }()
     
-    static let ddMMyyyyHyphenDateFormatter: DateFormatter =
+    public static let ddMMyyyyHyphenDateFormatter: DateFormatter =
     {
         let dateFormatter = DateFormatter()
         
@@ -61,7 +61,7 @@ extension DateFormatter
         return dateFormatter
     }()
     
-    static let yyyyMMddDateFormatter: DateFormatter =
+    public static let yyyyMMddDateFormatter: DateFormatter =
     {
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
@@ -70,7 +70,7 @@ extension DateFormatter
         return dateFormatter
     }()
     
-    static let MMMddyyhhmmaDateFormatter: DateFormatter =
+    public static let MMMddyyhhmmaDateFormatter: DateFormatter =
     {
         let dateFormatter = DateFormatter()
         
@@ -81,7 +81,7 @@ extension DateFormatter
         return dateFormatter
     }()
     
-    static let EEEEddMMyyAthhmmDateFormatter: DateFormatter =
+    public static let EEEEddMMyyAthhmmDateFormatter: DateFormatter =
     {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale.current
@@ -90,7 +90,7 @@ extension DateFormatter
         return dateFormatter
     }()
     
-    static let readableDateFormatter: DateFormatter =
+    public static let readableDateFormatter: DateFormatter =
     {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale.current
@@ -99,7 +99,7 @@ extension DateFormatter
         return dateFormatter
     }()
     
-    static let timeDateFormatter: DateFormatter =
+    public static let timeDateFormatter: DateFormatter =
     {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale.current
@@ -108,7 +108,7 @@ extension DateFormatter
         return dateFormatter
     }()
     
-    static let monthDateFormatter: DateFormatter =
+    public static let monthDateFormatter: DateFormatter =
     {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale.current
@@ -117,7 +117,7 @@ extension DateFormatter
         return dateFormatter
     }()
     
-    static let ddMMyyyyHHmmFormatter: DateFormatter =
+    public static let ddMMyyyyHHmmFormatter: DateFormatter =
     {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale.current
@@ -128,7 +128,7 @@ extension DateFormatter
     
     
     
-    static let displayTimeFormatter: DateFormatter =
+    public static let displayTimeFormatter: DateFormatter =
     {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale.current
@@ -137,7 +137,7 @@ extension DateFormatter
         return dateFormatter
     }()
     
-    static let fullWithZFormatter: DateFormatter =
+    public static let fullWithZFormatter: DateFormatter =
     {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale.current
@@ -146,7 +146,7 @@ extension DateFormatter
         return dateFormatter
     }()
     
-    static let monthFormatter: DateFormatter =
+    public static let monthFormatter: DateFormatter =
     {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale.current
@@ -155,7 +155,7 @@ extension DateFormatter
         return dateFormatter
     }()
     
-    static let dayFormatter: DateFormatter =
+    public static let dayFormatter: DateFormatter =
     {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale.current
@@ -164,7 +164,7 @@ extension DateFormatter
         return dateFormatter
     }()
     
-    static let ddMMMyyyyDateFormatter: DateFormatter =
+    public static let ddMMMyyyyDateFormatter: DateFormatter =
     {
         let dateFormatter = DateFormatter()
         
