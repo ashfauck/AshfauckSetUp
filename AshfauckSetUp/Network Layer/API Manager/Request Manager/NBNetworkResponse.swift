@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum NBNetworkResponse:Error {
+public enum NBNetworkResponse:Error {
     case success
     case authenticationError
     case badRequest
@@ -51,7 +51,7 @@ enum NBNetworkResponse:Error {
 
 extension HTTPURLResponse
 {
-    func verifyResponse() -> ResponseCheck<String>
+    public func verifyResponse() -> ResponseCheck<String>
     {
         switch self.statusCode
         {
@@ -73,7 +73,7 @@ extension HTTPURLResponse
     }
 }
 
-enum ResponseCheck<String>
+public enum ResponseCheck<String>
 {
     case success
     case failure(String)

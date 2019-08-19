@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 //import NVActivityIndicatorView
 
-enum LAYER_SIDES: Int {
+public enum LAYER_SIDES: Int {
     case LAYER_TOP = 1,
     LAYER_BOTTOM,
     LAYER_LEFT,

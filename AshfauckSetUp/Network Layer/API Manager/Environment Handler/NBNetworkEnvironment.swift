@@ -8,14 +8,14 @@
 
 import UIKit
 
-enum NBNetworkEnvironment
+public enum NBNetworkEnvironment
 {
     case release
     case staging
     case test
 }
 
-struct EnvironmentManager
+public struct EnvironmentManager
 {
     #if Test
     //    // Test environment

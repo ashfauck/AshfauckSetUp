@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Closure {
+public class Closure {
     @objc let closure: ()->()
     
     init (_ closure: @escaping ()->()) {

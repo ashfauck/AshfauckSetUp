@@ -11,7 +11,7 @@ import UIKit
 public typealias NetworkRouterCompletion = (Result<(Data?, URLResponse?), Error>) -> ()
 
 
-protocol NetworkRouter: class
+public protocol NetworkRouter: class
 {
     associatedtype EndPoint: NBRequestSchema
     
@@ -20,7 +20,7 @@ protocol NetworkRouter: class
     func cancel()
 }
 
-class NBRouter<EndPoint: NBRequestSchema>: NetworkRouter {
+public class NBRouter<EndPoint: NBRequestSchema>: NetworkRouter {
     
     private var task: URLSessionTask?
     {
@@ -41,7 +41,7 @@ class NBRouter<EndPoint: NBRequestSchema>: NetworkRouter {
         }
     }
     
-    func request(_ route: EndPoint, loadingView:UIView?, completion: @escaping NetworkRouterCompletion)
+    public func request(_ route: EndPoint, loadingView:UIView?, completion: @escaping NetworkRouterCompletion)
     {
         let sessionConfig = URLSessionConfiguration.default
         sessionConfig.timeoutIntervalForRequest = 20
@@ -74,7 +74,7 @@ class NBRouter<EndPoint: NBRequestSchema>: NetworkRouter {
         }
     }
     
-    func cancel() {
+    public func cancel() {
         self.task?.cancel()
     }
     

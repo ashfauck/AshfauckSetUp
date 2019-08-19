@@ -8,9 +8,9 @@
 
 import UIKit
 
-class NBNetworkLogger
+public  class NBNetworkLogger
 {
-    static func log(request: URLRequest)
+    public static func log(request: URLRequest)
     {
         print("\n - - - - - - - - - - OUTGOING - - - - - - - - - - \n")
         defer { print("\n - - - - - - - - - -  END - - - - - - - - - - \n") }
@@ -54,7 +54,7 @@ class NBNetworkLogger
         print(curl)
     }
     
-    static func log(response: URLResponse?)
+    public static func log(response: URLResponse?)
     {
         guard let response = response else { return }
         

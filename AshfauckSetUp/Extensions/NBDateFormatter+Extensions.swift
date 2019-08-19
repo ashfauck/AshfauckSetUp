@@ -9,7 +9,7 @@
 import Foundation
 
 
-enum DateFormat : String
+public enum DateFormat : String
 {
     case fullFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
     case ddMMyyyyFormat = "dd/MM/yyyy"

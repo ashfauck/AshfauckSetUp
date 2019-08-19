@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol NBRequestSchema {
+public protocol NBRequestSchema {
     var baseURL : URL { get }
     var path : String { get }
     var httpMethod : NBHttpMethod { get }

@@ -11,7 +11,9 @@ spec.social_media_url = "https://github.com/ashfuack/AshfauckSetUp"
 spec.platform = :ios, "11.0"
 spec.requires_arc = true
 spec.swift_version = "5.0"
-spec.source = { git: "https://github.com/ashfuack/AshfauckSetUp.git", tag: "v#{spec.version}", submodules: true }
+# spec.source = { git: "https://github.com/ashfuack/AshfauckSetUp.git", tag: "v#{spec.version}", submodules: false }
+spec.source = { :git => "https://github.com/ashfuack/AshfauckSetUp" }
+
 spec.source_files = "AshfauckSetUp/**/*.{h,swift}"
 
 
