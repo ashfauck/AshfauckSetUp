@@ -11,7 +11,7 @@ import UIKit
 public typealias NetworkRouterCompletion = (Result<(Data?, URLResponse?), Error>) -> ()
 
 
-fileprivate protocol NetworkRouter: class
+public protocol NetworkRouter: class
 {
     associatedtype EndPoint: NBRequestSchema
     
@@ -20,28 +20,9 @@ fileprivate protocol NetworkRouter: class
     func cancel()
 }
 
-public class NBRouter<EndPoint: NBRequestSchema>: NetworkRouter {
-    
-    private var task: URLSessionTask?
-    {
-        didSet
-        {
-            guard let task = task else { return }
-            
-            DispatchQueue.main.async {
-                if task.state == .running
-                {
-                    UIApplication.shared.isNetworkActivityIndicatorVisible = true
-                }
-                else
-                {
-                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
-                }
-            }
-        }
-    }
-    
-    public func request(_ route: EndPoint, loadingView:UIView?, completion: @escaping NetworkRouterCompletion)
+public extension NBRouter
+{
+    func request(_ route: EndPoint, loadingView:UIView?, completion: @escaping NetworkRouterCompletion)
     {
         let sessionConfig = URLSessionConfiguration.default
         sessionConfig.timeoutIntervalForRequest = 20
@@ -74,9 +55,33 @@ public class NBRouter<EndPoint: NBRequestSchema>: NetworkRouter {
         }
     }
     
-    public func cancel() {
+    func cancel() {
         self.task?.cancel()
     }
+
+}
+
+public class NBRouter<EndPoint: NBRequestSchema>: NetworkRouter {
+    
+    private var task: URLSessionTask?
+    {
+        didSet
+        {
+            guard let task = task else { return }
+            
+            DispatchQueue.main.async {
+                if task.state == .running
+                {
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = true
+                }
+                else
+                {
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                }
+            }
+        }
+    }
+    
     
     fileprivate func buildRequest(from route: EndPoint) throws -> URLRequest {
         
