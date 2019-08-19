@@ -13,7 +13,7 @@ import UIKit
 
 extension UIColor {
     
-    convenience init(hex:UInt32, alpha:CGFloat = 1.0)
+    public convenience init(hex:UInt32, alpha:CGFloat = 1.0)
     {
         self.init(
             red:   CGFloat((hex & 0xFF0000) >> 16) / 255.0,
@@ -23,7 +23,7 @@ extension UIColor {
         )
     }
     
-    var appColor: UIColor {
+    public var appColor: UIColor {
         return UIColor.blue// AppColor.themeColor
     }
     

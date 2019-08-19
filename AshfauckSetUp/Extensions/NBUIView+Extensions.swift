@@ -20,7 +20,7 @@ public enum LAYER_SIDES: Int {
 
 extension UIView {
     
-    func dropShadow(color: UIColor, opacity: Float = 0.5, offSet: CGSize, radius: CGFloat = 1, scale: Bool = true) {
+    public func dropShadow(color: UIColor, opacity: Float = 0.5, offSet: CGSize, radius: CGFloat = 1, scale: Bool = true) {
         layer.masksToBounds = false
         layer.shadowColor = color.cgColor
         layer.shadowOpacity = opacity
@@ -32,7 +32,7 @@ extension UIView {
         layer.rasterizationScale = scale ? UIScreen.main.scale : 1
     }
     
-    @IBInspectable var cornerRadius: CGFloat {
+    @IBInspectable public var cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
         }
@@ -42,7 +42,7 @@ extension UIView {
         }
     }
     
-    @IBInspectable var borderWidth: CGFloat {
+    @IBInspectable public var borderWidth: CGFloat {
         get {
             return layer.borderWidth
         }
@@ -51,7 +51,7 @@ extension UIView {
         }
     }
     
-    @IBInspectable var borderColor: UIColor? {
+    @IBInspectable public var borderColor: UIColor? {
         get {
             return UIColor(cgColor: layer.borderColor!)
         }
@@ -60,7 +60,7 @@ extension UIView {
         }
     }
     
-    @IBInspectable var shadowColor: UIColor? {
+    @IBInspectable public var shadowColor: UIColor? {
         set {
             layer.shadowColor = newValue?.cgColor
         }
@@ -69,7 +69,7 @@ extension UIView {
         }
     }
     
-    @IBInspectable var shadowOffset: CGSize {
+    @IBInspectable public var shadowOffset: CGSize {
         set {
             layer.shadowOffset = newValue
         }
@@ -77,7 +77,7 @@ extension UIView {
             return layer.shadowOffset
         }
     }
-    @IBInspectable var shadowOpacity: Float {
+    @IBInspectable public var shadowOpacity: Float {
         set
         {
             layer.shadowOpacity = newValue
@@ -88,7 +88,7 @@ extension UIView {
         }
     }
     
-    @IBInspectable var shadowRadius: CGFloat
+    @IBInspectable public var shadowRadius: CGFloat
         {
         set
         {
@@ -106,7 +106,7 @@ extension UIView {
             return layer.shadowRadius
         }
     }
-    @IBInspectable var startGradiantColor:UIColor? {
+    @IBInspectable public var startGradiantColor:UIColor? {
         
         get {
             return objc_getAssociatedObject(self, &AssociatedKeys.startColor) as? UIColor
@@ -119,7 +119,7 @@ extension UIView {
         
     }
     
-    @IBInspectable var endGradiantColor:UIColor? {
+    @IBInspectable public var endGradiantColor:UIColor? {
         
         get {
             return objc_getAssociatedObject(self, &AssociatedKeys.endColor) as? UIColor
@@ -130,7 +130,7 @@ extension UIView {
         }
     }
     
-    func setUpGradiant()  {
+    public func setUpGradiant()  {
         
         let gradient = CAGradientLayer()
         gradient.frame = CGRect(origin: CGPoint.zero, size: self.frame.size)
@@ -154,7 +154,7 @@ extension UIView {
         }
     }
     
-    func gradiantWithArrayOfColors(colors:[UIColor],startPoint:CGPoint,endPoint:CGPoint,locations:[NSNumber]) -> CAGradientLayer
+    public func gradiantWithArrayOfColors(colors:[UIColor],startPoint:CGPoint,endPoint:CGPoint,locations:[NSNumber]) -> CAGradientLayer
     {
         let gradient = CAGradientLayer()
         gradient.frame = self.bounds
@@ -169,11 +169,11 @@ extension UIView {
     }
     
     private struct AssociatedKeys {
-        static var startColor : UIColor?
-        static var endColor : UIColor?
+        static public var startColor : UIColor?
+        static public var endColor : UIColor?
     }
     
-    func rotate(_ toValue: CGFloat, duration: CFTimeInterval = 0.2) {
+    public func rotate(_ toValue: CGFloat, duration: CFTimeInterval = 0.2) {
         let animation = CABasicAnimation(keyPath: "transform.rotation")
         
         animation.toValue = toValue
@@ -184,11 +184,11 @@ extension UIView {
         self.layer.add(animation, forKey: nil)
     }
     
-    func currentViewController() -> UIViewController? {
+    public func currentViewController() -> UIViewController? {
         
         if let rootController = UIApplication.shared.keyWindow?.rootViewController
         {
-            var currentController: UIViewController! = rootController
+             var currentController: UIViewController! = rootController
             
             while( currentController.presentedViewController != nil )
             {
@@ -201,7 +201,7 @@ extension UIView {
         return nil
     }
     
-    func roundCorners(_ corners: UIRectCorner, radius: CGFloat)
+    public func roundCorners(_ corners: UIRectCorner, radius: CGFloat)
     {
         let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         let mask = CAShapeLayer()
@@ -210,7 +210,7 @@ extension UIView {
         self.layoutIfNeeded()
     }
     
-    func layerDrawForView(position:LAYER_SIDES,color:UIColor,layerThickness:CGFloat) -> Void {
+    public func layerDrawForView(position:LAYER_SIDES,color:UIColor,layerThickness:CGFloat) -> Void {
         
         let border = CALayer()
         
@@ -256,14 +256,14 @@ extension UIView {
     }
     
     /** Loads instance from nib with the same name. */
-    func loadNib() -> UIView {
+    public func loadNib() -> UIView {
         let bundle = Bundle(for: type(of: self))
         let nibName = type(of: self).description().components(separatedBy: ".").last!
         let nib = UINib(nibName: nibName, bundle: bundle)
         return nib.instantiate(withOwner: self, options: nil).first as! UIView
     }
     
-    final func prepareKeyboardDismissOnTap() {
+    final public func prepareKeyboardDismissOnTap() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tappedOnView))
         self.addGestureRecognizer(tapGesture)
     }
@@ -283,7 +283,7 @@ extension UIView {
         }
     }
     
-    @objc func showDoneBtnOnKeyboard(sourceTextFieldOrtextView:AnyObject) -> Void {
+    @objc public func showDoneBtnOnKeyboard(sourceTextFieldOrtextView:AnyObject) -> Void {
         
         let toolbar = UIToolbar(frame: CGRect(x: 0, y: UIScreen.main.bounds.size.height, width: UIScreen.main.bounds.size.width, height: 44))
         
@@ -307,7 +307,7 @@ extension UIView {
         }
     }
     
-    func addTapGesture(tapNumber: Int, target: Any, action: Selector)
+    public func addTapGesture(tapNumber: Int, target: Any, action: Selector)
     {
         let tap = UITapGestureRecognizer (target: target, action: action)
         tap.numberOfTapsRequired = tapNumber
@@ -364,7 +364,7 @@ extension UIView {
 //        }
 //    }
     
-    var parentViewController: UIViewController? {
+    public var parentViewController: UIViewController? {
         var parentResponder: UIResponder? = self
         while parentResponder != nil {
             parentResponder = parentResponder!.next
@@ -375,14 +375,14 @@ extension UIView {
         return nil
     }
     
-    func updateConstraint(attribute: NSLayoutConstraint.Attribute, constant: CGFloat) -> Void {
+    public func updateConstraint(attribute: NSLayoutConstraint.Attribute, constant: CGFloat) -> Void {
         if let constraint = (self.constraints.filter{$0.firstAttribute == attribute}.first) {
             constraint.constant = constant
             self.layoutIfNeeded()
         }
     }
     
-    func tableAndCollectionViewEmptyMessage(message: String? = nil) {
+    public func tableAndCollectionViewEmptyMessage(message: String? = nil) {
         
         //        let messageLabel : UILabel = UILabel(frame: CGRect(x: self.frame.width/2, y: self.frame.height/2, width: self.frame.width, height: 30))
         
@@ -396,7 +396,7 @@ extension UIView {
     }
     
     
-    func dropShadow(show : Bool){
+    public func dropShadow(show : Bool){
         
         if show == true {
             layer.masksToBounds = false

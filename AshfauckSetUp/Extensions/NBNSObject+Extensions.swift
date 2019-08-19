@@ -12,7 +12,7 @@ import GameplayKit
 
 extension NSObject
 {
-    func stackAlertView(withTitle title: String?, message: String?,delay:Double? = nil,completion: (() -> Void)? = nil)
+    public func stackAlertView(withTitle title: String?, message: String?,delay:Double? = nil,completion: (() -> Void)? = nil)
     {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
@@ -44,7 +44,7 @@ extension NSObject
         }
     }
     
-    func stackConfirmationAlert(withTitle title: String?, message: String?,okBtnName:String? = nil,cancelBtnName:String? = nil,okCompletion: (() -> Void)? = nil,cancelCompletion: (() -> Void)? = nil)
+    public func stackConfirmationAlert(withTitle title: String?, message: String?,okBtnName:String? = nil,cancelBtnName:String? = nil,okCompletion: (() -> Void)? = nil,cancelCompletion: (() -> Void)? = nil)
     {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
@@ -76,7 +76,7 @@ extension NSObject
     }
     
     
-    func randomString(length : Int) -> String {
+    public func randomString(length : Int) -> String {
         let charSet = Array("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
         let shuffled = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: charSet) as! [Character]
         let array = shuffled.prefix(length)
@@ -86,7 +86,7 @@ extension NSObject
 
 extension DispatchQueue
 {
-    static func background(delay: Double = 0.0, background: (()->Void)? = nil, completion: ((_ completed:Bool) -> Void)? = nil)
+    static public func background(delay: Double = 0.0, background: (()->Void)? = nil, completion: ((_ completed:Bool) -> Void)? = nil)
     {
         DispatchQueue.global(qos: .background).async
             {
@@ -105,7 +105,7 @@ extension DispatchQueue
 extension Double
 {
     /// Rounds the double to decimal places value
-    func rounded(toPlaces places:Int) -> Double
+    public func rounded(toPlaces places:Int) -> Double
     {
         let divisor = pow(10.0, Double(places))
         return (self * divisor).rounded() / divisor
@@ -113,7 +113,7 @@ extension Double
 }
 
 extension NSMutableData {
-    func appendString(_ string: String) {
+    public func appendString(_ string: String) {
         let data = string.data(using: String.Encoding.utf8, allowLossyConversion: false)
         append(data!)
     }

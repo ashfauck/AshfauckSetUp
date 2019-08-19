@@ -11,18 +11,18 @@ import UIKit
 
 extension UICollectionView
 {
-    func indexPathsForElements(in rect: CGRect) -> [IndexPath]
+    public func indexPathsForElements(in rect: CGRect) -> [IndexPath]
     {
         let allLayoutAttributes = collectionViewLayout.layoutAttributesForElements(in: rect)!
         return allLayoutAttributes.map { $0.indexPath }
     }
     
-    func register(identifier:String)
+    public func register(identifier:String)
     {
         self.register(UINib(nibName: identifier, bundle: nil), forCellWithReuseIdentifier: identifier)
     }
     
-    func setEmptyMessage(_ message: String,textColor:UIColor)
+    public func setEmptyMessage(_ message: String,textColor:UIColor)
     {
         let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
         messageLabel.text = message
@@ -35,12 +35,12 @@ extension UICollectionView
         self.backgroundView = messageLabel
     }
     
-    func restore()
+    public func restore()
     {
         self.backgroundView = nil
     }
     
-    func checkEmptyRow(rowCount:Int,message:String,textColor:UIColor)
+    public func checkEmptyRow(rowCount:Int,message:String,textColor:UIColor)
     {
         _ = (rowCount == 0) ? self.setEmptyMessage(message,textColor:textColor) : self.restore()
     }

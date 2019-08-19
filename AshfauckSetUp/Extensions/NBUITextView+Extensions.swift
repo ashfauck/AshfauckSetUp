@@ -11,7 +11,7 @@ import UIKit
 
 extension UITextView
 {
-    @IBInspectable var isDone: Bool {
+    @IBInspectable public var isDone: Bool {
         
         set {
             if newValue == true

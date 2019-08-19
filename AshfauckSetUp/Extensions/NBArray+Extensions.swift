@@ -12,7 +12,7 @@ import Foundation
 extension Array where Element: Equatable
 {
     // Remove first collection element that is equal to the given `object`:
-    mutating func remove(object: Element) {
+    mutating public func remove(object: Element) {
         if let index = firstIndex(of: object)
         {
             remove(at: index)
@@ -22,13 +22,13 @@ extension Array where Element: Equatable
 
 extension Array where Element: Hashable
 {
-    var uniqueValues: Set<Element> {
+    public var uniqueValues: Set<Element> {
         return Set<Element>(self)
     }
 }
 
 extension Array {
-    func grouped<T>(by criteria: (Element) -> T) -> [T: [Element]] {
+    public func grouped<T>(by criteria: (Element) -> T) -> [T: [Element]] {
         var groups = [T: [Element]]()
         for element in self {
             let key = criteria(element)
@@ -41,7 +41,7 @@ extension Array {
     }
     
     
-    func find<T: Equatable>(item:T,elements:[T]) -> Int?
+    public func find<T: Equatable>(item:T,elements:[T]) -> Int?
     {
         var index:Int = 0
         var found = false
@@ -61,7 +61,7 @@ extension Array {
         return found ? index : nil
     }
     
-    func exists<T:Equatable>(item:T,elements:[T]) -> Bool
+    public func exists<T:Equatable>(item:T,elements:[T]) -> Bool
     {
         var index:Int = 0
         var found = false

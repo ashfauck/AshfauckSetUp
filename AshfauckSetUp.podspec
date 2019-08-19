@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |spec|
 spec.name = "AshfauckSetUp"
-spec.version = "1.0.2"
+spec.version = "1.0.3"
 spec.summary = "Framework for users who would like to start their project from high level structure."
 spec.homepage = "https://github.com/ashfuack/AshfauckSetUp"
 spec.license = { type: 'MIT', file: 'LICENSE' }

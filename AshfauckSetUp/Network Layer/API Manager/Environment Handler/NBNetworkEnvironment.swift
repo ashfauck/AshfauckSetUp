@@ -19,17 +19,17 @@ public struct EnvironmentManager
 {
     #if Test
     //    // Test environment
-    static let environment:NBNetworkEnvironment = .test
+    static public let environment:NBNetworkEnvironment = .test
     #elseif Stage
     //    // Stage environment
-    static let environment:NBNetworkEnvironment = .staging
+    static public let environment:NBNetworkEnvironment = .staging
     #else
     //    // Release environment
-    static let environment:NBNetworkEnvironment = .release
+    static public let environment:NBNetworkEnvironment = .release
     #endif
     
-    static var accessToken:String = ""
-    static var environmentBaseURL:String {
+    static public var accessToken:String = ""
+    static public var environmentBaseURL:String {
         
         switch EnvironmentManager.environment
         {

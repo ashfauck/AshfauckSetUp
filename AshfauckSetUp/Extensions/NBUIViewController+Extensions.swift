@@ -11,7 +11,7 @@ import UIKit
 
 extension UIViewController:UIPopoverPresentationControllerDelegate {
     
-    func showAlert(withTitle title: String?, message: String?,delay:Double? = nil,completion: (() -> Void)? = nil)
+    public func showAlert(withTitle title: String?, message: String?,delay:Double? = nil,completion: (() -> Void)? = nil)
     {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
@@ -40,7 +40,7 @@ extension UIViewController:UIPopoverPresentationControllerDelegate {
     
     
     
-    func confirmationAlert(withTitle title: String?, message: String?,okBtnName:String? = nil,cancelBtnName:String? = nil,okCompletion: (() -> Void)? = nil,cancelCompletion: (() -> Void)? = nil)
+    public func confirmationAlert(withTitle title: String?, message: String?,okBtnName:String? = nil,cancelBtnName:String? = nil,okCompletion: (() -> Void)? = nil,cancelCompletion: (() -> Void)? = nil)
     {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
@@ -76,7 +76,7 @@ extension UIViewController:UIPopoverPresentationControllerDelegate {
         }
     }
     
-    func createViewInPopOverController<T: UIViewController>(viewController:T,frame:CGRect,sourceView:UIView,delegate:UIPopoverPresentationControllerDelegate)
+    public func createViewInPopOverController<T: UIViewController>(viewController:T,frame:CGRect,sourceView:UIView,delegate:UIPopoverPresentationControllerDelegate)
     {
         viewController.modalPresentationStyle = .popover
         
@@ -103,13 +103,13 @@ extension UIViewController:UIPopoverPresentationControllerDelegate {
         }
     }
     
-    func removeNavigationLine()
+    public func removeNavigationLine()
     {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
     }
     
-    func showToast(message : String, duration: CGFloat) {
+    public func showToast(message : String, duration: CGFloat) {
         
         guard let window = UIApplication.shared.keyWindow else { return }
         

@@ -11,46 +11,46 @@ import UIKit
 
 extension UIButton
 {
-    func setImageUrl(url:Any?,placeHolderImage:UIImage?)
+    public func setImageUrl(url:Any?,placeHolderImage:UIImage?)
     {
         
-        guard let url = url else { return }
-        
-        if url is String
-        {
-            if let urlString = url as? String,let imageUrl = urlString.toURL()
-            {
-//                self.pin_setImage(from: imageUrl, placeholderImage: placeHolderImage)
-            }
-        }
-        else if url is URL
-        {
-            if let imageUrl = url as? URL
-            {
-//                self.pin_setImage(from: imageUrl, placeholderImage: placeHolderImage)
-            }
-        }
+//        guard let url = url else { return }
+//
+//        if url is String
+//        {
+//            if let urlString = url as? String,let imageUrl = urlString.toURL()
+//            {
+////                self.pin_setImage(from: imageUrl, placeholderImage: placeHolderImage)
+//            }
+//        }
+//        else if url is URL
+//        {
+//            if let imageUrl = url as? URL
+//            {
+////                self.pin_setImage(from: imageUrl, placeholderImage: placeHolderImage)
+//            }
+//        }
     }
     
-    func setBackgroundImageUrl(url:Any?,placeHolderImage:UIImage?)
+    public func setBackgroundImageUrl(url:Any?,placeHolderImage:UIImage?)
     {
         
-        guard let url = url else { return }
-        
-        if url is String
-        {
-            if let urlString = url as? String,let imageUrl = urlString.toURL()
-            {
-//                self.sd_setBackgroundImage(with: imageUrl, for: .normal, completed: nil)
-            }
-        }
-        else if url is URL
-        {
-            if let imageUrl = url as? URL
-            {
-//                self.self.sd_setBackgroundImage(with: imageUrl, for: .normal, completed: nil)
-            }
-        }
+//        guard let url = url else { return }
+//
+//        if url is String
+//        {
+//            if let urlString = url as? String,let imageUrl = urlString.toURL()
+//            {
+////                self.sd_setBackgroundImage(with: imageUrl, for: .normal, completed: nil)
+//            }
+//        }
+//        else if url is URL
+//        {
+//            if let imageUrl = url as? URL
+//            {
+////                self.self.sd_setBackgroundImage(with: imageUrl, for: .normal, completed: nil)
+//            }
+//        }
     }
 }
 
@@ -70,7 +70,7 @@ extension UIBarButtonItem {
         }
     }
     
-    @objc func didTapButton(sender: Any) {
+    @objc public func didTapButton(sender: Any) {
         actionClosure?()
     }
 }

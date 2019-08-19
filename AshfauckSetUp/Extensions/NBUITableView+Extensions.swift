@@ -12,7 +12,7 @@ import UIKit
 extension UITableView
 {
     
-    func setEmptyMessageText(_ message: String,textColor:UIColor)
+    public func setEmptyMessageText(_ message: String,textColor:UIColor)
     {
         let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
         messageLabel.text = message
@@ -26,7 +26,7 @@ extension UITableView
         self.separatorStyle = .none;
     }
     
-    func setEmptyMessage(message: String,textColor:UIColor,image:UIImage? = nil, action:Selector? = nil, target:Any? = nil)
+    public func setEmptyMessage(message: String,textColor:UIColor,image:UIImage? = nil, action:Selector? = nil, target:Any? = nil)
     {
 
 //        DispatchQueue.main.async {
@@ -39,7 +39,7 @@ extension UITableView
 //        }
     }
     
-    func restore()
+    public func restore()
     {
         DispatchQueue.main.async {
 //            if let view = self.viewWithTag(20002)
@@ -51,24 +51,24 @@ extension UITableView
         }
     }
     
-    func checkEmptyRow(rowCount:Int,message:String,textColor:UIColor,image:UIImage? = nil, action:Selector? = nil, target:Any? = nil)
+    public func checkEmptyRow(rowCount:Int,message:String,textColor:UIColor,image:UIImage? = nil, action:Selector? = nil, target:Any? = nil)
     {
         _ = (rowCount == 0) ? self.setEmptyMessage(message: message, textColor: textColor, image: image, action: action, target: target) : self.restore()
     }
     
-    func reloadDataWithLayout() {
+    public func reloadDataWithLayout() {
         self.reloadData()
         self.setNeedsLayout()
         self.layoutIfNeeded()
         self.reloadData()
     }
     
-    func register(identifier:String)
+    public func register(identifier:String)
     {
         self.register(UINib(nibName: identifier, bundle: nil), forCellReuseIdentifier: identifier)
     }
     
-    func reloadSectionWithAnimation(indepath:IndexPath,animation:UITableView.RowAnimation? = .automatic)
+    public func reloadSectionWithAnimation(indepath:IndexPath,animation:UITableView.RowAnimation? = .automatic)
     {
         DispatchQueue.main.async {
             self.beginUpdates()
@@ -85,7 +85,7 @@ extension UITableView
         }
     }
     
-    func reloadDataInMainThread()
+    public func reloadDataInMainThread()
     {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1)
         {

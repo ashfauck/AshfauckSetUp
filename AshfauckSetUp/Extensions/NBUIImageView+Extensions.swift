@@ -12,7 +12,7 @@ import UIKit
 
 extension UIImageView
 {
-    func setGradient(colors : [UIColor]) {
+    public func setGradient(colors : [UIColor]) {
         
         let gradient = CAGradientLayer()
         gradient.frame = frame
@@ -21,7 +21,7 @@ extension UIImageView
         self.layer.addSublayer(gradient)
     }
     
-    func setImageUrl(url:Any?,placeHolderImage:UIImage?)
+    public func setImageUrl(url:Any?,placeHolderImage:UIImage?)
     {
         
         guard let url = url else { return }
@@ -41,7 +41,7 @@ extension UIImageView
         
     }
     
-    func setDefaultImageCacheUrl(imageType:Any?,placeHolderImage:UIImage?)
+    public func setDefaultImageCacheUrl(imageType:Any?,placeHolderImage:UIImage?)
     {
         let imageUrl:URL
         
@@ -89,7 +89,7 @@ extension UIImageView
         }
     }
     
-    func checkAndChangeContentSizeOfImage()
+    public func checkAndChangeContentSizeOfImage()
     {
         guard let imageViewIage = self.image else { return }
         
@@ -104,7 +104,7 @@ extension UIImageView
         }
     }
 
-    func downloadImage(from url: URL, contentMode: UIView.ContentMode) {
+    public func downloadImage(from url: URL, contentMode: UIView.ContentMode) {
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard
                 let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
@@ -118,7 +118,7 @@ extension UIImageView
             }.resume()
     }
     
-    func downloadImage(from link: String, contentMode: UIView.ContentMode) {
+    public func downloadImage(from link: String, contentMode: UIView.ContentMode) {
         guard let url = URL(string: link) else { return }
         downloadImage(from: url, contentMode: contentMode)
     }
@@ -126,7 +126,7 @@ extension UIImageView
 
 extension UIImage
 {
-    func resized(withPercentage percentage: CGFloat) -> UIImage?
+    public func resized(withPercentage percentage: CGFloat) -> UIImage?
     {
         let canvasSize = CGSize(width: size.width * percentage, height: size.height * percentage)
         UIGraphicsBeginImageContextWithOptions(canvasSize, false, scale)
@@ -135,7 +135,7 @@ extension UIImage
         return UIGraphicsGetImageFromCurrentImageContext()
     }
     
-    class func outlinedEllipse(size: CGSize, color: UIColor, lineWidth: CGFloat = 1.0) -> UIImage?
+    public class func outlinedEllipse(size: CGSize, color: UIColor, lineWidth: CGFloat = 1.0) -> UIImage?
     {
         
         UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
@@ -156,7 +156,7 @@ extension UIImage
         return image
     }
     
-    func resizeImage( newWidth: CGFloat) -> UIImage? {
+    public func resizeImage( newWidth: CGFloat) -> UIImage? {
         
         let scale = newWidth / self.size.width
         let newHeight = self.size.height * scale
@@ -168,7 +168,7 @@ extension UIImage
         return newImage
     }
     
-    func resize(width: CGFloat,height: CGFloat) -> UIImage?
+    public func resize(width: CGFloat,height: CGFloat) -> UIImage?
     {
         UIGraphicsBeginImageContext(CGSize(width: width, height: height))
         self.draw(in: CGRect(origin: .zero, size: CGSize(width: width, height:height)))

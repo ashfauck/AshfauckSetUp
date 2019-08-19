@@ -11,7 +11,7 @@ import UIKit
 public typealias NetworkRouterCompletion = (Result<(Data?, URLResponse?), Error>) -> ()
 
 
-public protocol NetworkRouter: class
+fileprivate protocol NetworkRouter: class
 {
     associatedtype EndPoint: NBRequestSchema
     

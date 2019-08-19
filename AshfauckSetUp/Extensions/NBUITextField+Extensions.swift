@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-enum TextFieldKeyboardConfig: Int {
+public enum TextFieldKeyboardConfig: Int {
     case email = 1,
     name,
     password,
@@ -47,7 +47,7 @@ extension UITextField {
         }
     }
     
-    @IBInspectable var placeHolderColor: UIColor? {
+    @IBInspectable public var placeHolderColor: UIColor? {
         get {
             return self.placeHolderColor
         }
@@ -56,7 +56,7 @@ extension UITextField {
         }
     }
     
-    @IBInspectable var rightImage: UIImage? {
+    @IBInspectable public var rightImage: UIImage? {
         set (newValue) {
             guard  newValue != nil else {
                 return
@@ -68,7 +68,7 @@ extension UITextField {
         }
     }
     
-    @IBInspectable var leftImage: UIImage? {
+    @IBInspectable public var leftImage: UIImage? {
         
         set (newValue) {
             guard  newValue != nil else {
@@ -81,7 +81,7 @@ extension UITextField {
         }
     }
     
-    @IBInspectable var isNeedBottomLayer:Bool {
+    @IBInspectable public var isNeedBottomLayer:Bool {
         set {
             self.setBottomBorder()
         }
@@ -90,7 +90,7 @@ extension UITextField {
         }
     }
     
-    @IBInspectable var bottomLayerBorderColor: UIColor? {
+    @IBInspectable public var bottomLayerBorderColor: UIColor? {
         get {
             return UIColor(cgColor: layer.shadowColor!)
         }
@@ -99,7 +99,7 @@ extension UITextField {
         }
     }
     
-    func textFieldView(textField:UITextField,image: UIImage,whichSide:Int) -> Void {
+    public func textFieldView(textField:UITextField,image: UIImage,whichSide:Int) -> Void {
         
         let txtImgView : UIView = UIView(frame:CGRect(x: 0, y: 0, width: textField.frame.size.height, height:textField.frame.size.height ) )
 
@@ -139,7 +139,7 @@ extension UITextField {
         txtImgView.addSubview(button)
     }
     
-    func setBottomBorder()
+    public func setBottomBorder()
     {
         self.borderStyle = .none
         self.layer.backgroundColor = UIColor.white.cgColor
@@ -150,7 +150,7 @@ extension UITextField {
         self.layer.shadowRadius = 0.0
     }
     
-    func addIconBeforeOrAfter(before:String,image:UIImage,after:String)
+    public func addIconBeforeOrAfter(before:String,image:UIImage,after:String)
     {
         let imageAttachment =  NSTextAttachment()
         
@@ -214,7 +214,7 @@ extension UITextField {
         
     }
     
-    func datePickerInputView(dateFormat:String,datePickerMode:UIDatePicker.Mode? = nil,date:Date? = nil,minimumDate:Date? = nil,maximumDate:Date? = nil,minimum:Date? = nil,dateLabelText:String? = nil,completionHandler: @escaping (_ datePicker:UIDatePicker) -> Void)
+    public func datePickerInputView(dateFormat:String,datePickerMode:UIDatePicker.Mode? = nil,date:Date? = nil,minimumDate:Date? = nil,maximumDate:Date? = nil,minimum:Date? = nil,dateLabelText:String? = nil,completionHandler: @escaping (_ datePicker:UIDatePicker) -> Void)
     {
         let datePickerView = UIDatePicker()
         
@@ -353,7 +353,7 @@ extension UITextField {
         
     }
     
-    func updateBottomLine(_ config: TextFieldKeyboardConfig)
+    public func updateBottomLine(_ config: TextFieldKeyboardConfig)
     {
         
         if [TextFieldKeyboardConfig.email, TextFieldKeyboardConfig.username, TextFieldKeyboardConfig.password].contains(config)
