@@ -8,12 +8,66 @@
 
 /* Begin PBXBuildFile section */
 		04098EDD230A8ABE00827E90 /* AshfauckSetUp.h in Headers */ = {isa = PBXBuildFile; fileRef = 04098EDB230A8ABE00827E90 /* AshfauckSetUp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		048B05D2230AA47900818D4E /* NBUIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B05C1230AA47900818D4E /* NBUIButton+Extensions.swift */; };
+		048B05D3230AA47900818D4E /* NBDateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B05C2230AA47900818D4E /* NBDateFormatter+Extensions.swift */; };
+		048B05D4230AA47900818D4E /* NBDate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B05C3230AA47900818D4E /* NBDate+Extensions.swift */; };
+		048B05D5230AA47900818D4E /* NBUITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B05C4230AA47900818D4E /* NBUITextField+Extensions.swift */; };
+		048B05D6230AA47900818D4E /* NBUIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B05C5230AA47900818D4E /* NBUIImage+Extensions.swift */; };
+		048B05D7230AA47900818D4E /* NBUIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B05C6230AA47900818D4E /* NBUIColor+Extensions.swift */; };
+		048B05D8230AA47900818D4E /* NBUITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B05C7230AA47900818D4E /* NBUITableView+Extensions.swift */; };
+		048B05D9230AA47900818D4E /* NBUIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B05C8230AA47900818D4E /* NBUIViewController+Extensions.swift */; };
+		048B05DA230AA47900818D4E /* NBNSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B05C9230AA47900818D4E /* NBNSObject+Extensions.swift */; };
+		048B05DB230AA47900818D4E /* NBString+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B05CA230AA47900818D4E /* NBString+Extensions.swift */; };
+		048B05DC230AA47900818D4E /* NBUIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B05CB230AA47900818D4E /* NBUIFont+Extensions.swift */; };
+		048B05DD230AA47900818D4E /* NBUICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B05CC230AA47900818D4E /* NBUICollectionView+Extensions.swift */; };
+		048B05DE230AA47900818D4E /* NBUIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B05CD230AA47900818D4E /* NBUIView+Extensions.swift */; };
+		048B05DF230AA47900818D4E /* NBUITextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B05CE230AA47900818D4E /* NBUITextView+Extensions.swift */; };
+		048B05E0230AA47900818D4E /* NBArray+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B05CF230AA47900818D4E /* NBArray+Extensions.swift */; };
+		048B05E1230AA47900818D4E /* NBUIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B05D0230AA47900818D4E /* NBUIImageView+Extensions.swift */; };
+		048B05E2230AA47900818D4E /* NBUIControl+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B05D1230AA47900818D4E /* NBUIControl+Extensions.swift */; };
+		048B05F3230AAA2C00818D4E /* NBURLParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B05E6230AAA2C00818D4E /* NBURLParameterEncoding.swift */; };
+		048B05F4230AAA2C00818D4E /* NBJsonParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B05E7230AAA2C00818D4E /* NBJsonParameterEncoding.swift */; };
+		048B05F5230AAA2C00818D4E /* NBParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B05E8230AAA2C00818D4E /* NBParameterEncoding.swift */; };
+		048B05F6230AAA2C00818D4E /* NBNetworkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B05EA230AAA2C00818D4E /* NBNetworkEnvironment.swift */; };
+		048B05F7230AAA2C00818D4E /* NBNetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B05EC230AAA2C00818D4E /* NBNetworkLogger.swift */; };
+		048B05F8230AAA2C00818D4E /* NBRequestSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B05ED230AAA2C00818D4E /* NBRequestSchema.swift */; };
+		048B05F9230AAA2C00818D4E /* NBHttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B05EE230AAA2C00818D4E /* NBHttpMethod.swift */; };
+		048B05FA230AAA2C00818D4E /* NBRequestTaskType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B05EF230AAA2C00818D4E /* NBRequestTaskType.swift */; };
+		048B05FB230AAA2C00818D4E /* NBNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B05F0230AAA2C00818D4E /* NBNetworkResponse.swift */; };
+		048B05FC230AAA2C00818D4E /* NBRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B05F2230AAA2C00818D4E /* NBRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		04098ED8230A8ABE00827E90 /* AshfauckSetUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AshfauckSetUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04098EDB230A8ABE00827E90 /* AshfauckSetUp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AshfauckSetUp.h; sourceTree = "<group>"; };
 		04098EDC230A8ABE00827E90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		048B05C1230AA47900818D4E /* NBUIButton+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NBUIButton+Extensions.swift"; sourceTree = "<group>"; };
+		048B05C2230AA47900818D4E /* NBDateFormatter+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NBDateFormatter+Extensions.swift"; sourceTree = "<group>"; };
+		048B05C3230AA47900818D4E /* NBDate+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NBDate+Extensions.swift"; sourceTree = "<group>"; };
+		048B05C4230AA47900818D4E /* NBUITextField+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NBUITextField+Extensions.swift"; sourceTree = "<group>"; };
+		048B05C5230AA47900818D4E /* NBUIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NBUIImage+Extensions.swift"; sourceTree = "<group>"; };
+		048B05C6230AA47900818D4E /* NBUIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NBUIColor+Extensions.swift"; sourceTree = "<group>"; };
+		048B05C7230AA47900818D4E /* NBUITableView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NBUITableView+Extensions.swift"; sourceTree = "<group>"; };
+		048B05C8230AA47900818D4E /* NBUIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NBUIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		048B05C9230AA47900818D4E /* NBNSObject+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NBNSObject+Extensions.swift"; sourceTree = "<group>"; };
+		048B05CA230AA47900818D4E /* NBString+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NBString+Extensions.swift"; sourceTree = "<group>"; };
+		048B05CB230AA47900818D4E /* NBUIFont+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NBUIFont+Extensions.swift"; sourceTree = "<group>"; };
+		048B05CC230AA47900818D4E /* NBUICollectionView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NBUICollectionView+Extensions.swift"; sourceTree = "<group>"; };
+		048B05CD230AA47900818D4E /* NBUIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NBUIView+Extensions.swift"; sourceTree = "<group>"; };
+		048B05CE230AA47900818D4E /* NBUITextView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NBUITextView+Extensions.swift"; sourceTree = "<group>"; };
+		048B05CF230AA47900818D4E /* NBArray+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NBArray+Extensions.swift"; sourceTree = "<group>"; };
+		048B05D0230AA47900818D4E /* NBUIImageView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NBUIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		048B05D1230AA47900818D4E /* NBUIControl+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NBUIControl+Extensions.swift"; sourceTree = "<group>"; };
+		048B05E6230AAA2C00818D4E /* NBURLParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NBURLParameterEncoding.swift; sourceTree = "<group>"; };
+		048B05E7230AAA2C00818D4E /* NBJsonParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NBJsonParameterEncoding.swift; sourceTree = "<group>"; };
+		048B05E8230AAA2C00818D4E /* NBParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NBParameterEncoding.swift; sourceTree = "<group>"; };
+		048B05EA230AAA2C00818D4E /* NBNetworkEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NBNetworkEnvironment.swift; sourceTree = "<group>"; };
+		048B05EC230AAA2C00818D4E /* NBNetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NBNetworkLogger.swift; sourceTree = "<group>"; };
+		048B05ED230AAA2C00818D4E /* NBRequestSchema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NBRequestSchema.swift; sourceTree = "<group>"; };
+		048B05EE230AAA2C00818D4E /* NBHttpMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NBHttpMethod.swift; sourceTree = "<group>"; };
+		048B05EF230AAA2C00818D4E /* NBRequestTaskType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NBRequestTaskType.swift; sourceTree = "<group>"; };
+		048B05F0230AAA2C00818D4E /* NBNetworkResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NBNetworkResponse.swift; sourceTree = "<group>"; };
+		048B05F2230AAA2C00818D4E /* NBRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NBRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +100,93 @@
 		04098EDA230A8ABE00827E90 /* AshfauckSetUp */ = {
 			isa = PBXGroup;
 			children = (
+				048B05E3230AAA2C00818D4E /* Network Layer */,
+				048B05C0230AA47900818D4E /* Extensions */,
 				04098EDB230A8ABE00827E90 /* AshfauckSetUp.h */,
 				04098EDC230A8ABE00827E90 /* Info.plist */,
 			);
 			path = AshfauckSetUp;
+			sourceTree = "<group>";
+		};
+		048B05C0230AA47900818D4E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				048B05C1230AA47900818D4E /* NBUIButton+Extensions.swift */,
+				048B05C2230AA47900818D4E /* NBDateFormatter+Extensions.swift */,
+				048B05C3230AA47900818D4E /* NBDate+Extensions.swift */,
+				048B05C4230AA47900818D4E /* NBUITextField+Extensions.swift */,
+				048B05C5230AA47900818D4E /* NBUIImage+Extensions.swift */,
+				048B05C6230AA47900818D4E /* NBUIColor+Extensions.swift */,
+				048B05C7230AA47900818D4E /* NBUITableView+Extensions.swift */,
+				048B05C8230AA47900818D4E /* NBUIViewController+Extensions.swift */,
+				048B05C9230AA47900818D4E /* NBNSObject+Extensions.swift */,
+				048B05CA230AA47900818D4E /* NBString+Extensions.swift */,
+				048B05CB230AA47900818D4E /* NBUIFont+Extensions.swift */,
+				048B05CC230AA47900818D4E /* NBUICollectionView+Extensions.swift */,
+				048B05CD230AA47900818D4E /* NBUIView+Extensions.swift */,
+				048B05CE230AA47900818D4E /* NBUITextView+Extensions.swift */,
+				048B05CF230AA47900818D4E /* NBArray+Extensions.swift */,
+				048B05D0230AA47900818D4E /* NBUIImageView+Extensions.swift */,
+				048B05D1230AA47900818D4E /* NBUIControl+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		048B05E3230AAA2C00818D4E /* Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+				048B05E4230AAA2C00818D4E /* API Manager */,
+			);
+			path = "Network Layer";
+			sourceTree = "<group>";
+		};
+		048B05E4230AAA2C00818D4E /* API Manager */ = {
+			isa = PBXGroup;
+			children = (
+				048B05E5230AAA2C00818D4E /* Parameter Encoding */,
+				048B05E9230AAA2C00818D4E /* Environment Handler */,
+				048B05EB230AAA2C00818D4E /* Request Manager */,
+				048B05F1230AAA2C00818D4E /* Router */,
+			);
+			path = "API Manager";
+			sourceTree = "<group>";
+		};
+		048B05E5230AAA2C00818D4E /* Parameter Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				048B05E6230AAA2C00818D4E /* NBURLParameterEncoding.swift */,
+				048B05E7230AAA2C00818D4E /* NBJsonParameterEncoding.swift */,
+				048B05E8230AAA2C00818D4E /* NBParameterEncoding.swift */,
+			);
+			path = "Parameter Encoding";
+			sourceTree = "<group>";
+		};
+		048B05E9230AAA2C00818D4E /* Environment Handler */ = {
+			isa = PBXGroup;
+			children = (
+				048B05EA230AAA2C00818D4E /* NBNetworkEnvironment.swift */,
+			);
+			path = "Environment Handler";
+			sourceTree = "<group>";
+		};
+		048B05EB230AAA2C00818D4E /* Request Manager */ = {
+			isa = PBXGroup;
+			children = (
+				048B05EC230AAA2C00818D4E /* NBNetworkLogger.swift */,
+				048B05ED230AAA2C00818D4E /* NBRequestSchema.swift */,
+				048B05EE230AAA2C00818D4E /* NBHttpMethod.swift */,
+				048B05EF230AAA2C00818D4E /* NBRequestTaskType.swift */,
+				048B05F0230AAA2C00818D4E /* NBNetworkResponse.swift */,
+			);
+			path = "Request Manager";
+			sourceTree = "<group>";
+		};
+		048B05F1230AAA2C00818D4E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				048B05F2230AAA2C00818D4E /* NBRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -70,6 +207,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04098EE0230A8ABE00827E90 /* Build configuration list for PBXNativeTarget "AshfauckSetUp" */;
 			buildPhases = (
+				7D4137D4E379608C1BF9E6E1 /* [CP] Check Pods Manifest.lock */,
 				04098ED3230A8ABE00827E90 /* Headers */,
 				04098ED4230A8ABE00827E90 /* Sources */,
 				04098ED5230A8ABE00827E90 /* Frameworks */,
@@ -125,11 +263,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7D4137D4E379608C1BF9E6E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AshfauckSetUp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		04098ED4230A8ABE00827E90 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048B05F3230AAA2C00818D4E /* NBURLParameterEncoding.swift in Sources */,
+				048B05E1230AA47900818D4E /* NBUIImageView+Extensions.swift in Sources */,
+				048B05D3230AA47900818D4E /* NBDateFormatter+Extensions.swift in Sources */,
+				048B05FC230AAA2C00818D4E /* NBRouter.swift in Sources */,
+				048B05F4230AAA2C00818D4E /* NBJsonParameterEncoding.swift in Sources */,
+				048B05F5230AAA2C00818D4E /* NBParameterEncoding.swift in Sources */,
+				048B05DA230AA47900818D4E /* NBNSObject+Extensions.swift in Sources */,
+				048B05F9230AAA2C00818D4E /* NBHttpMethod.swift in Sources */,
+				048B05D4230AA47900818D4E /* NBDate+Extensions.swift in Sources */,
+				048B05D6230AA47900818D4E /* NBUIImage+Extensions.swift in Sources */,
+				048B05F7230AAA2C00818D4E /* NBNetworkLogger.swift in Sources */,
+				048B05D8230AA47900818D4E /* NBUITableView+Extensions.swift in Sources */,
+				048B05FB230AAA2C00818D4E /* NBNetworkResponse.swift in Sources */,
+				048B05D7230AA47900818D4E /* NBUIColor+Extensions.swift in Sources */,
+				048B05D2230AA47900818D4E /* NBUIButton+Extensions.swift in Sources */,
+				048B05DC230AA47900818D4E /* NBUIFont+Extensions.swift in Sources */,
+				048B05D9230AA47900818D4E /* NBUIViewController+Extensions.swift in Sources */,
+				048B05FA230AAA2C00818D4E /* NBRequestTaskType.swift in Sources */,
+				048B05DF230AA47900818D4E /* NBUITextView+Extensions.swift in Sources */,
+				048B05E0230AA47900818D4E /* NBArray+Extensions.swift in Sources */,
+				048B05E2230AA47900818D4E /* NBUIControl+Extensions.swift in Sources */,
+				048B05DE230AA47900818D4E /* NBUIView+Extensions.swift in Sources */,
+				048B05DB230AA47900818D4E /* NBString+Extensions.swift in Sources */,
+				048B05DD230AA47900818D4E /* NBUICollectionView+Extensions.swift in Sources */,
+				048B05D5230AA47900818D4E /* NBUITextField+Extensions.swift in Sources */,
+				048B05F6230AAA2C00818D4E /* NBNetworkEnvironment.swift in Sources */,
+				048B05F8230AAA2C00818D4E /* NBRequestSchema.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,13 +378,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -246,12 +437,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -278,7 +470,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.orgware.AshfauckSetUp;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -303,7 +495,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.orgware.AshfauckSetUp;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
